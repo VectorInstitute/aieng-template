@@ -1,0 +1,9 @@
+toml
+isort
+pytest
+pytest-cov
+mypy
+types-requests 
+types-setuptools
+flake8
+black
