@@ -1,9 +1,10 @@
-toml
+black
+flake8
 isort
+mypy
+pre-commit
 pytest
 pytest-cov
-mypy
-types-requests 
+toml
+types-requests
 types-setuptools
-flake8
-black
