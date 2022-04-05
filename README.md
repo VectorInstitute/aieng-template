@@ -1,5 +1,5 @@
 # aieng-template
-aieng template repo
+aieng template repo, the static code checker runs on python3.8
 
 # Installing dependencies
 ```
