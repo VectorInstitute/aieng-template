@@ -1,8 +1,8 @@
 """Test for bar module."""
 
-from aieng_template import bar
+from aieng_template.bar import bar as barfn
 
 
-def test_bar() -> None:
+def test_barfn() -> None:
     """Test bar function."""
-    assert bar() == "bar"
+    assert barfn() == "bar"

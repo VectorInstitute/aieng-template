@@ -1,8 +1,8 @@
 """Test for foo module."""
 
-from aieng_template import foo
+from aieng_template.foo import foo as foofn
 
 
-def test_foo() -> None:
-    """Test foo function."""
-    assert foo() == "foo"
+def test_foofn() -> None:
+    """Test foofn function."""
+    assert foofn() == "foo"
