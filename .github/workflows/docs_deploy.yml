@@ -52,4 +52,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: github_pages
-          folder: build/html
+          folder: docs/build/html
