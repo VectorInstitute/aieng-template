@@ -1,10 +1,25 @@
-# aieng-template
-aieng template repo, the static code checker runs on python3.8
+# AI Engineering template
+
+A template repo to bootstrap new AI Engineering projects
+
+## 🧑🏿‍💻 Developing
 
 # Installing dependencies
+
+The development environment can be set up using
+[poetry](https://python-poetry.org/docs/#installation). Hence, make sure it is
+installed and then run:
+
+```bash
+python3 -m poetry install
+source $(poetry env info --path)/bin/activate
 ```
-pip install --upgrade pip
-pip install -r requirements.txt
+
+In order to install dependencies for testing (codestyle, unit tests, integration tests),
+run:
+
+```bash
+python3 -m poetry install --with test
 ```
 
 # using pre-commit hooks
