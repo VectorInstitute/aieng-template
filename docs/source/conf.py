@@ -31,10 +31,40 @@ author = "Vector AI Engineering"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.coverage",
+    "sphinx.ext.doctest",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.autosummary",
+    "sphinx_autodoc_typehints",
+    "sphinx.ext.intersphinx",
+    "numpydoc",
+    "sphinx.ext.viewcode",
+    "sphinxcontrib.apidoc",
+    "sphinx.ext.autosectionlabel",
     "myst_parser",
     "sphinx_design",
     "sphinx_copybutton",
 ]
+numpydoc_show_inherited_class_members = False
+numpydoc_show_class_members = False
+napoleon_google_docstring = False
+napoleon_numpy_docstring = True
+napoleon_include_init_with_doc = True
+add_module_names = False
+autosectionlabel_prefix_document = True
+copybutton_prompt_text = r">>> |\.\.\. "
+copybutton_prompt_is_regexp = True
+
+apidoc_module_dir = "../../aieng_template"
+apidoc_excluded_paths = ["tests"]
+apidoc_output_dir = "reference/api"
+apidoc_separate_modules = True
+apidoc_extra_args = ["-f", "-M", "-T", "--implicit-namespaces"]
+
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3.9/", None),
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
