@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Vector AI Engineering template repository" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="API Reference" href="api.html" /><link rel="prev" title="Vector AI Engineering template repository" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>User Guide - Vector AI Engineering template repository</title>
@@ -164,6 +164,14 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">User Guide</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="reference/api/aieng_template.html">aieng_template namespace</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of aieng_template namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="reference/api/aieng_template.bar.html">aieng_template.bar module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reference/api/aieng_template.foo.html">aieng_template.foo module</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -230,6 +238,24 @@ in the previous section, navigate to the <code class="docutils literal notransla
 <p>You can configure the documentation by updating the <code class="docutils literal notranslate"><span class="pre">docs/source/conf.py</span></code>. The markdown
 files in <code class="docutils literal notranslate"><span class="pre">docs/source</span></code> can be updated to reflect the project’s documentation.</p>
 </section>
+<section id="github-actions">
+<h2>github actions<a class="headerlink" href="#github-actions" title="Link to this heading">#</a></h2>
+<p>The template consists of some github action continuous integration workflows that you
+can add to your repository.</p>
+<p>The available workflows are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/VectorInstitute/aieng-template/blob/main/.github/workflows/code_checks.yml">code checks</a>: Static code analysis, code formatting and unit tests</p></li>
+<li><p><a class="reference external" href="https://github.com/VectorInstitute/aieng-template/blob/main/.github/workflows/docs_deploy.yml">documentation</a>: Project documentation including example API reference</p></li>
+<li><p><a class="reference external" href="https://github.com/VectorInstitute/aieng-template/blob/main/.github/workflows/integration_tests.yml">integration tests</a>: Integration tests</p></li>
+<li><p><a class="reference external" href="https://github.com/VectorInstitute/aieng-template/blob/main/.github/workflows/publish.yml">publish</a>:
+Publishing python package to PyPI. Create a <code class="docutils literal notranslate"><span class="pre">PYPI_API_TOKEN</span></code> and add it to the
+repository’s actions <a class="reference external" href="https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions">secret variables</a>
+in order to publish PyPI packages when new software releases are created on Github.</p></li>
+</ul>
+<p>The test workflows also compute coverage and upload code coverage metrics to
+<a class="reference external" href="https://app.codecov.io/gh/VectorInstitute/aieng-template">codecov.io</a>. Create a
+<code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code> and add it to the repository’s actions <a class="reference external" href="https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions">secret variables</a>.</p>
+</section>
 </section>
 
         </article>
@@ -237,7 +263,15 @@ files in <code class="docutils literal notranslate"><span class="pre">docs/sourc
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="api.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">API Reference</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
@@ -291,6 +325,7 @@ files in <code class="docutils literal notranslate"><span class="pre">docs/sourc
 <li><a class="reference internal" href="#">User Guide</a><ul>
 <li><a class="reference internal" href="#pyproject-toml-file-and-dependency-management">pyproject.toml file and dependency management</a></li>
 <li><a class="reference internal" href="#documentation">documentation</a></li>
+<li><a class="reference internal" href="#github-actions">github actions</a></li>
 </ul>
 </li>
 </ul>
@@ -307,7 +342,7 @@ files in <code class="docutils literal notranslate"><span class="pre">docs/sourc
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/copybutton.js?v=ccdb6887"></script>
     <script src="_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>

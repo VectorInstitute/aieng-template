@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="User Guide" href="user_guide.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="aieng_template namespace" href="reference/api/aieng_template.html" /><link rel="prev" title="User Guide" href="user_guide.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>Vector AI Engineering template repository</title>
+        <title>API Reference - Vector AI Engineering template repository</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -131,7 +131,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">Vector AI Engineering template repository</div></a>
+      <a href="index.html"><div class="brand">Vector AI Engineering template repository</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">Vector AI Engineering template repository</span>
@@ -162,9 +162,9 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="reference/api/aieng_template.html">aieng_template namespace</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of aieng_template namespace</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="reference/api/aieng_template.bar.html">aieng_template.bar module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="reference/api/aieng_template.foo.html">aieng_template.foo module</a></li>
@@ -206,48 +206,13 @@
           </label>
         </div>
         <article role="main">
-          <section id="vector-ai-engineering-template-repository">
-<h1>Vector AI Engineering template repository<a class="headerlink" href="#vector-ai-engineering-template-repository" title="Link to this heading">#</a></h1>
+          <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
-</div>
-<p>This template repository can be used to bootstrap AI Engineering project repositories
-on Github! The template is meant for python codebases since Python is the most commonly
-used language by our team.</p>
-<p>The template includes:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/">pyproject.toml</a>
-file to specify repository information and manage dependencies using
-<a class="reference external" href="https://python-poetry.org/">Poetry</a>.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">README.md</a> which should have basic information on why the project is
-useful, installation instructions and other information on how users can get started.</p></li>
-<li><p><a class="reference external" href="https://pre-commit.com/">.pre-commit-config.yaml</a> for running pre-commit hooks that
-check for code-style, apply formatting, check for type hints and run tests.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">.github/pull_request_template.md</a> for PRs.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">.github/ISSUE_TEMPLATE</a> for bug reports and issues that can be raised on the repository.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/actions/using-workflows">.github/workflows</a> for running CI
-workflows using Github actions. The template includes CI workflows for code checks,
-documentation building and releasing python packages to PyPI.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">LICENSE.md</a> for adding a license to the project repository.
-By default, this is the <a class="reference external" href="http://www.apache.org/licenses/">Apache-2.0 license</a>. Please
-change according to your project!</p></li>
-<li><p><a class="reference external" href="https://pradyunsg.me/furo/">docs</a> for adding project documentation. Typically
-projects should have API reference documentation, user guides and tutorials.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors">CONTRIBUTING.md</a> with basic guidelines on how others can
-contribute to the repository.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project">CODE_OF_CONDUCT.md</a> with standards on how the community engages in
-a healthy and constructive manner.</p></li>
-<li><p><a class="reference external" href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files">.gitignore</a>
-with some standard file extensions to be ignored by git. Please add/modify as necessary.</p></li>
-<li><p><a class="reference external" href="https://docs.codecov.com/docs/codecov-yaml">codecov.yml</a> for using codecov.io to
-generate code coverage information for your repository. You would need to add codecov.io
-app as an <a class="reference external" href="https://docs.codecov.com/docs/how-to-create-a-github-app-for-codecov-enterprise">integration to your repository</a>.</p></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/api/aieng_template.html">aieng_template namespace</a></li>
 </ul>
-<p>If you are starting a new project, you can navigate to the <a class="reference external" href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template">Use this template</a> button
-on the top right corner of the <a class="reference external" href="https://github.com/VectorInstitute/aieng-template">template repository home page</a>
-which will allow you to bootstrap your project repo using this template.</p>
-<p>Please check out the user guide page for more detailed information on using the
-template features. For exisiting projects, the <a class="reference internal" href="user_guide.html"><span class="std std-doc">user guide</span></a>
-can be followed to migrate to following the template more closely.</p>
+</div>
 </section>
 
         </article>
@@ -255,16 +220,26 @@ can be followed to migrate to following the template more closely.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="user_guide.html">
+          <a class="next-page" href="reference/api/aieng_template.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">User Guide</div>
+                <div class="title">aieng_template namespace</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="user_guide.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">User Guide</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
