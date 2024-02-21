@@ -1,10 +1,18 @@
 # AI Engineering template
 
-A template repo to bootstrap new AI Engineering projects
+----------------------------------------------------------------------------------------
+
+[![code checks](https://github.com/VectorInstitute/cyclops/actions/workflows/code_checks.yml/badge.svg)](https://github.com/VectorInstitute/aieng-template/actions/workflows/code_checks.yml)
+[![integration tests](https://github.com/VectorInstitute/cyclops/actions/workflows/integration_tests.yml/badge.svg)](https://github.com/VectorInstitute/aieng-template/actions/workflows/integration_tests.yml)
+[![docs](https://github.com/VectorInstitute/cyclops/actions/workflows/docs_deploy.yml/badge.svg)](https://github.com/VectorInstitute/aieng-template/actions/workflows/docs_deploy.yml)
+[![codecov](https://codecov.io/gh/VectorInstitute/cyclops/branch/main/graph/badge.svg)](https://codecov.io/gh/VectorInstitute/aieng-template)
+[![license](https://img.shields.io/github/license/VectorInstitute/cyclops.svg)](https://github.com/VectorInstitute/aieng-template/blob/main/LICENSE)
+
+A template repo for AI Engineering projects (using ``python``)
 
 ## 🧑🏿‍💻 Developing
 
-# Installing dependencies
+### Installing dependencies
 
 The development environment can be set up using
 [poetry](https://python-poetry.org/docs/#installation). Hence, make sure it is
@@ -20,15 +28,4 @@ run:
 
 ```bash
 python3 -m poetry install --with test
-```
-
-# using pre-commit hooks
-To check your code at commit time
-```
-pre-commit install
-```
-
-You can also get pre-commit to fix your code
-```
-pre-commit run
 ```
