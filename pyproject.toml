@@ -7,7 +7,7 @@ license = "Apache-2.0"
 repository = "https://github.com/VectorInstitute/aieng-template"
 documentation = "https://vectorinstitute.github.io/aieng-template/"
 packages = [
-    { include = "src/aieng_template" },
+    { include = "aieng_template" },
 ]
 readme = "README.md"
 
@@ -44,7 +44,6 @@ ipykernel = "^6.23.0"
 furo = "^2024.01.29"
 
 [tool.mypy]
-plugins = ["numpy.typing.mypy_plugin"]
 ignore_missing_imports = true
 install_types = true
 pretty = true
@@ -129,7 +128,7 @@ markers = [
 
 [tool.coverage]
     [tool.coverage.run]
-    source=["src"]
+    source=["aieng_template"]
     omit=["tests/*", "*__init__.py"]
 
 [build-system]

@@ -1,6 +1,6 @@
 """bar module."""
 
 
-def bar():
+def bar() -> str:
     """Return 'bar'."""
     return "bar"

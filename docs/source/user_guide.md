@@ -4,7 +4,7 @@
 
 ## pyproject.toml file and dependency management
 
-If your project doesn't have a pyproject.toml file, simply copy the one from the 
+If your project doesn't have a pyproject.toml file, simply copy the one from the
 template and update file according to your project.
 
 For managing dependencies, [Poetry](https://python-poetry.org/) is the recommended tool

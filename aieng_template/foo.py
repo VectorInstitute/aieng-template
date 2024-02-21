@@ -1,6 +1,6 @@
 """foo module."""
 
 
-def foo():
+def foo() -> str:
     """Return 'foo'."""
     return "foo"
