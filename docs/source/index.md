@@ -8,6 +8,7 @@ hide-toc: true
 :hidden:
 
 user_guide
+api
 
 ```
 

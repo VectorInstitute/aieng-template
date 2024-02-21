@@ -5,4 +5,4 @@ from aieng_template.foo import foo as foofn
 
 def test_foofn() -> None:
     """Test foofn function."""
-    assert foofn() == "foo"
+    assert foofn("bar") == "foobar"
