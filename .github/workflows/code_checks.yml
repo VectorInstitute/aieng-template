@@ -42,6 +42,4 @@ jobs:
       - name: pip-audit (gh-action-pip-audit)
         uses: pypa/gh-action-pip-audit@v1.0.8
         with:
-          virtual-environment: |
-            echo $(poetry env info --path)
-            $(poetry env info --path)/
+          inputs: .
