@@ -36,11 +36,10 @@ jobs:
       - name: Install dependencies and check code
         run: |
           poetry env use '3.10'
-          source $(poetry env info --path)/bin/activate
+          poetry config virtualenvs.path ./venv/
           poetry install --with test --all-extras
           pre-commit run --all-files
       - name: pip-audit (gh-action-pip-audit)
         uses: pypa/gh-action-pip-audit@v1.0.8
-        run: |
-          poetry env use '3.10'
-          source $(poetry env info --path)/bin/activate
+        with:
+          virtual-environment: ./venv/
