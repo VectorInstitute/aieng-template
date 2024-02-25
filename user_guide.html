@@ -225,6 +225,39 @@ which help manage dependencies for different parts of development such as <code 
 </pre></div>
 </div>
 </section>
+<section id="pre-commit">
+<h2>pre-commit<a class="headerlink" href="#pre-commit" title="Link to this heading">#</a></h2>
+<p>You can use <a class="reference external" href="https://pre-commit.com/">pre-commit</a> to run pre-commit hooks (code checks,
+liniting, etc.) when you run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> and commit your code. Simply copy the
+<code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code> file to the root of the repository and install the test
+dependencies which installs pre-commit. Then run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit<span class="w"> </span>install
+</pre></div>
+</div>
+<p>If you prefer to not enforce using pre-commit every time you run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>,
+you will have to run <code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">run</span> <span class="pre">--all-files</span></code> from the command line before you
+commit your code.</p>
+<div class="important admonition">
+<p class="admonition-title">hook configuration</p>
+<p>Some of the pre-commit hooks use <a class="reference external" href="https://pre-commit.com/hooks.html">supported hooks</a>
+from the web.</p>
+<p>For some others, they are locally installed and hence use the python virtual environment
+locally. If <code class="docutils literal notranslate"><span class="pre">language</span></code> is set to <code class="docutils literal notranslate"><span class="pre">python</span></code>, each time the hook is installed, a separate
+python virtual environment is created and you can specify dependencies needed using
+<code class="docutils literal notranslate"><span class="pre">additional_dependencies</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">language</span></code> is set to <code class="docutils literal notranslate"><span class="pre">system</span></code>, the activated python virtual environment is used and
+and hence you have to ensure that the required dependencies and their versions are
+correctly installed.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
+<span class="w">    </span><span class="nt">hooks</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytest</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytest</span>
+<span class="w">      </span><span class="nt">entry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3 -m pytest -m &quot;not integration_test&quot;</span>
+<span class="w">      </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python/system</span><span class="w"> </span><span class="c1"># set according to your project needs</span>
+</pre></div>
+</div>
+</div>
+</section>
 <section id="documentation">
 <h2>documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
 <p>If your project doesn’t have documentation, copy the directory named <code class="docutils literal notranslate"><span class="pre">docs</span></code> to the root
@@ -324,6 +357,7 @@ in order to publish PyPI packages when new software releases are created on Gith
             <ul>
 <li><a class="reference internal" href="#">User Guide</a><ul>
 <li><a class="reference internal" href="#pyproject-toml-file-and-dependency-management">pyproject.toml file and dependency management</a></li>
+<li><a class="reference internal" href="#pre-commit">pre-commit</a></li>
 <li><a class="reference internal" href="#documentation">documentation</a></li>
 <li><a class="reference internal" href="#github-actions">github actions</a></li>
 </ul>
