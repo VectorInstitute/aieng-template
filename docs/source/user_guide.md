@@ -23,6 +23,45 @@ Additional dependency groups can be installed using the `--with` flag. For examp
 python3 -m poetry install --with docs,test
 ```
 
+## pre-commit
+
+You can use [pre-commit](https://pre-commit.com/) to run pre-commit hooks (code checks,
+liniting, etc.) when you run `git commit` and commit your code. Simply copy the
+`.pre-commit-config.yaml` file to the root of the repository and install the test
+dependencies which installs pre-commit. Then run:
+
+```bash
+pre-commit install
+```
+
+If you prefer to not enforce using pre-commit every time you run `git commit`,
+you will have to run `pre-commit run --all-files` from the command line before you
+commit your code.
+
+```{admonition} hook configuration
+:class: important
+
+Some of the pre-commit hooks use [supported hooks](https://pre-commit.com/hooks.html)
+from the web.
+
+For some others, they are locally installed and hence use the python virtual environment
+locally. If `language` is set to `python`, each time the hook is installed, a separate
+python virtual environment is created and you can specify dependencies needed using
+`additional_dependencies`.
+
+If `language` is set to `system`, the activated python virtual environment is used and
+and hence you have to ensure that the required dependencies and their versions are
+correctly installed.
+
+```yaml
+  - repo: local
+    hooks:
+    - id: pytest
+      name: pytest
+      entry: python3 -m pytest -m "not integration_test"
+      language: python/system # set according to your project needs
+```
+
 ## documentation
 
 If your project doesn't have documentation, copy the directory named `docs` to the root
