@@ -224,6 +224,17 @@ which help manage dependencies for different parts of development such as <code 
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>poetry<span class="w"> </span>install<span class="w"> </span>--with<span class="w"> </span>docs,test
 </pre></div>
 </div>
+<div class="important admonition">
+<p class="admonition-title">mypy configuration options</p>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">mypy</span></code> configuration in the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> disallows subclassing
+the <code class="docutils literal notranslate"><span class="pre">Any</span></code> type - <code class="docutils literal notranslate"><span class="pre">allow_subclassing_any</span> <span class="pre">=</span> <span class="pre">false</span></code>. In cases where the type checker
+is not able to determine the types of objects in some external library (e.g. <code class="docutils literal notranslate"><span class="pre">PyTorch</span></code>),
+it will treat them as <code class="docutils literal notranslate"><span class="pre">Any</span></code> and raise errors. If your codebase has many of such
+cases, you can set <code class="docutils literal notranslate"><span class="pre">allow_subclassing_any</span> <span class="pre">=</span> <span class="pre">true</span></code> in the <code class="docutils literal notranslate"><span class="pre">mypy</span></code> configuration or
+remove it entirely to use the default value (which is <code class="docutils literal notranslate"><span class="pre">true</span></code>). For example, in
+a <code class="docutils literal notranslate"><span class="pre">PyTorch</span></code> project, subclassing <code class="docutils literal notranslate"><span class="pre">nn.Module</span></code> will raise errors if <code class="docutils literal notranslate"><span class="pre">allow_subclassing_any</span></code>
+is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</div>
 </section>
 <section id="pre-commit">
 <h2>pre-commit<a class="headerlink" href="#pre-commit" title="Link to this heading">#</a></h2>
