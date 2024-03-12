@@ -31,7 +31,7 @@ the `Any` type - `allow_subclassing_any = false`. In cases where the type checke
 is not able to determine the types of objects in some external library (e.g. `PyTorch`),
 it will treat them as `Any` and raise errors. If your codebase has many of such
 cases, you can set `allow_subclassing_any = true` in the `mypy` configuration or
-remove it entirely to use the default value (which is `true`). For example, in 
+remove it entirely to use the default value (which is `true`). For example, in
 a `PyTorch` project, subclassing `nn.Module` will raise errors if `allow_subclassing_any`
 is set to `false`.
 ```
@@ -74,6 +74,18 @@ correctly installed.
       name: pytest
       entry: python3 -m pytest -m "not integration_test"
       language: python/system # set according to your project needs
+```
+
+```{admonition} typos
+:class: warning
+
+The [typos](https://github.com/crate-ci/typos) pre-commit hook is used to check for
+common spelling mistakes in the codebase. While useful, it may require some
+configuration to ignore certain words or phrases that are not typos. You can
+[configure the typos hook](https://github.com/crate-ci/typos/blob/master/docs/reference.md)
+in the `pyproject.toml` file. In a large codebase, it may be useful to disable
+the typos hook and only run it occasionally on the entire codebase.
+
 ```
 
 ## documentation
