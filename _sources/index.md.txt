@@ -62,5 +62,5 @@ on the top right corner of the [template repository home page](https://github.co
 which will allow you to bootstrap your project repo using this template.
 
 Please check out the user guide page for more detailed information on using the
-template features. For exisiting projects, the [user guide](user_guide.md)
+template features. For existing projects, the [user guide](user_guide.md)
 can be followed to migrate to following the template more closely.

@@ -268,6 +268,15 @@ correctly installed.</p>
 </pre></div>
 </div>
 </div>
+<div class="warning admonition">
+<p class="admonition-title">typos</p>
+<p>The <a class="reference external" href="https://github.com/crate-ci/typos">typos</a> pre-commit hook is used to check for
+common spelling mistakes in the codebase. While useful, it may require some
+configuration to ignore certain words or phrases that are not typos. You can
+<a class="reference external" href="https://github.com/crate-ci/typos/blob/master/docs/reference.md">configure the typos hook</a>
+in the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file. In a large codebase, it may be useful to disable
+the typos hook and only run it occasionally on the entire codebase.</p>
+</div>
 </section>
 <section id="documentation">
 <h2>documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
