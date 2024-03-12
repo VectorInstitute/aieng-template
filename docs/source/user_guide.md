@@ -31,7 +31,7 @@ the `Any` type - `allow_subclassing_any = false`. In cases where the type checke
 is not able to determine the types of objects in some external library (e.g. `PyTorch`),
 it will treat them as `Any` and raise errors. If your codebase has many of such
 cases, you can set `allow_subclassing_any = true` in the `mypy` configuration or
-remove it entirely to use the default value (which is `true`). For example, in 
+remove it entirely to use the default value (which is `true`). For example, in
 a `PyTorch` project, subclassing `nn.Module` will raise errors if `allow_subclassing_any`
 is set to `false`.
 ```
