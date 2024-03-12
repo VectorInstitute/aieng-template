@@ -76,6 +76,18 @@ correctly installed.
       language: python/system # set according to your project needs
 ```
 
+```{admonition} typos
+:class: warning
+
+The [typos](https://github.com/crate-ci/typos) pre-commit hook is used to check for
+common spelling mistakes in the codebase. While useful, it may require some
+configuration to ignore certain words or phrases that are not typos. You can
+[configure the typos hook](https://github.com/crate-ci/typos/blob/master/docs/reference.md)
+in the `pyproject.toml` file. In a large codebase, it may be useful to disable
+the typos hook and only run it occasionally on the entire codebase.
+
+```
+
 ## documentation
 
 If your project doesn't have documentation, copy the directory named `docs` to the root
