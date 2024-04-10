@@ -12,6 +12,8 @@ on:
       - .github/workflows/integration_tests.yml
       - '**.py'
       - '**.ipynb'
+      - '**.html'
+      - '**.js'
       - poetry.lock
       - pyproject.toml
       - '**.rst'

@@ -117,4 +117,8 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 templates_path = ["_templates"]
 html_static_path = ["_static"]
+html_js_files = [
+    "require.min.js",
+    "custom.js",
+]
 html_additional_pages = {"page": "page.html"}
