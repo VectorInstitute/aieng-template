@@ -88,6 +88,14 @@ the typos hook and only run it occasionally on the entire codebase.
 
 ```
 
+### pre-commit ci
+
+Instead of fixing pre-commit errors manually, a CI to fix them as well as update
+pre-commit hooks periodically can be enabled for your repository. Please check
+[pre-commit.ci](https://pre-commit.ci/) and add your repository. The configuration for
+``pre-commit.ci`` can be added to the ``.pre-commit-config.yaml`` file.
+
+
 ## documentation
 
 If your project doesn't have documentation, copy the directory named `docs` to the root
