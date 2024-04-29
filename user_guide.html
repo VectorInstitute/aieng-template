@@ -297,6 +297,13 @@ configuration to ignore certain words or phrases that are not typos. You can
 in the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file. In a large codebase, it may be useful to disable
 the typos hook and only run it occasionally on the entire codebase.</p>
 </div>
+<section id="pre-commit-ci">
+<h3>pre-commit ci<a class="headerlink" href="#pre-commit-ci" title="Link to this heading">#</a></h3>
+<p>Instead of fixing pre-commit errors manually, a CI to fix them as well as update
+pre-commit hooks periodically can be enabled for your repository. Please check
+<a class="reference external" href="https://pre-commit.ci/">pre-commit.ci</a> and add your repository. The configuration for
+<code class="docutils literal notranslate"><span class="pre">pre-commit.ci</span></code> can be added to the <code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code> file.</p>
+</section>
 </section>
 <section id="documentation">
 <h2>documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
@@ -405,7 +412,10 @@ in order to publish PyPI packages when new software releases are created on Gith
             <ul>
 <li><a class="reference internal" href="#">User Guide</a><ul>
 <li><a class="reference internal" href="#pyproject-toml-file-and-dependency-management">pyproject.toml file and dependency management</a></li>
-<li><a class="reference internal" href="#pre-commit">pre-commit</a></li>
+<li><a class="reference internal" href="#pre-commit">pre-commit</a><ul>
+<li><a class="reference internal" href="#pre-commit-ci">pre-commit ci</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#documentation">documentation</a></li>
 <li><a class="reference internal" href="#github-actions">github actions</a></li>
 </ul>
