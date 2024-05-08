@@ -40,7 +40,7 @@ jobs:
           cd docs && rm -rf source/reference/api/_autosummary && make html
           cd .. && coverage run -m pytest -m "not integration_test" && coverage xml && coverage report -m
       - name: Upload coverage to Codecov
-        uses: Wandalen/wretry.action@v1.4.4
+        uses: Wandalen/wretry.action@v3.4.0
         with:
           action: codecov/codecov-action@v4.0.1
           with: |
