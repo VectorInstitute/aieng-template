@@ -57,5 +57,6 @@ jobs:
             file: ./coverage.xml
             name: codecov-umbrella
             fail_ci_if_error: true
+            verbose: true
           attempt_limit: 5
           attempt_delay: 30000
